@@ -30,7 +30,7 @@
       "value": "nextopsaspt19"
     },
     "PUL_HostingPlanSKU": {
-      "value": "Standard S1"
+      "value": "Basic B1"
     },
     "PUL_HostingPlanWorkerSize": {
       "value": "0"

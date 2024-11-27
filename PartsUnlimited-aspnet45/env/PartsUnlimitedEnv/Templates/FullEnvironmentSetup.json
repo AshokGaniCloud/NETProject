@@ -120,10 +120,13 @@
 			},
 			"properties": {
 				"name": "[parameters('PUL_HostingPlanName')]",
-				"sku": "[parameters('PUL_HostingPlanSKU')]",
 				"workerSize": "[parameters('PUL_HostingPlanWorkerSize')]",
 				"numberOfWorkers": 1
-			}
+			},
+			"sku": {
+                "Tier": "Standard",
+                "Name": "S1"
+            }
 		},
 		{
 			"name": "[concat(parameters('PUL_HostingPlanName'), '-', resourceGroup().name)]",
