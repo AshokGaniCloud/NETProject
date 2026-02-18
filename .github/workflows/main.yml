@@ -22,11 +22,14 @@ jobs:
       - name: dornet restore
         run: dotnet restore -f PartsUnlimited-aspnet45/PartsUnlimited.sln
       - name: dotnet build
-        run:  dotnet build  --no-restore
+        run:  dotnet build --configuration release --no-restore
         continue-on-error: true
       - name: Dotnet tests
         run: |
-          cd PartsUnlimited-aspnet45/test/
+          cd PartsUnlimited-aspnet45/test/PartsUnlimited.UnitTests/PartsUnlimited.UnitTests.csproj
+          dotnet test --no-build --verbosity normal
+
+
           dotnet test --no-restore --verbosity normal
           
       
