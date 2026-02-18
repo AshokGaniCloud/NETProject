@@ -22,7 +22,7 @@ jobs:
       - name: dornet restore
         run: dotnet restore -f PartsUnlimited-aspnet45/PartsUnlimited.sln
       - name: dotnet build
-        run:  dotnet build --configuration release --no-restore
+        run:  dotnet build  --no-restore
         continue-on-error: true
       - name: Dotnet tests
         run: |
