@@ -30,7 +30,7 @@ jobs:
           dotnet test --no-build --verbosity normal
 
 
-          dotnet test --no-restore --verbosity normal
+        
           
       
   
