@@ -25,11 +25,9 @@ jobs:
         run:  dotnet build  --no-restore
         continue-on-error: true
       - name: Dotnet tests
-        uses: EasyDesk/action-dotnet-test@v1.0.0
-        with:
-          build-configuration: Release
-          path: PartsUnlimited-aspnet45/PartsUnlimited.sln
-          skip-build: true
+        run: |
+          cd PartsUnlimited-aspnet45/test/
+          dotnet test --no-restore --verbosity normal
           
       
   
