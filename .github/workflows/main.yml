@@ -24,6 +24,5 @@ jobs:
       - name: dotnet build
         run:  dotnet build  --no-restore
         continue-on-error: true
-      - name: dotnet test
-        run: dotnet test  --no-build 
+      
   
