@@ -24,5 +24,12 @@ jobs:
       - name: dotnet build
         run:  dotnet build  --no-restore
         continue-on-error: true
+      - name: Dotnet tests
+        uses: EasyDesk/action-dotnet-test@v1.0.0
+        with:
+          build-configuration: Release
+          path: .
+          skip-build: true
+          
       
   
